@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: helvetica;
+}
+
+header {
+    height: 10vh;
+    width: 100%;
+    background-color: #0C0908;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.3rem;
+}
+
+.logo{
+    font-size: 1.8rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(219, 219, 219);
+}
+
+header ul{
+    display: flex;
+    color: white;
+}
+
+header ul li{
+    list-style: none ;
+    margin: 9px;
+}
+
+header ul li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.container {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.side-bar {
+    height: 100%;
+    width: 14%;
+    background: #141414;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.side-bar .material-icon {
+    color: white;
+    font-size: 2rem;
+}
+
+span {
+    padding: 6px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 1.5rem;
+    background: gray;
+}
+
+span:hover {
+    cursor: pointer;
+    background-color: rgb(95, 94, 94);
+}
+
+span:active {
+    background-color: rgb(51, 50, 50);
+    ;
+}
+
+.hover-text {
+    display: none;
+}
+
+span {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+span:hover .hover-text {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 0;
+    border-radius: 3px;
+    font-size: 1.1rem; 
+    z-index: 1;
+}
+
+/* ----------------RIGHT-PANEL------------ */
+
+.right-panel {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tablet-container {
+    height: 100%;
+    width: 100%;
+    background-color: #262424;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+    box-shadow: inset 0px 2px 14px -6px rgba(242, 242, 242, 1);
+}
+
+.tablet-img {
+    height: 27.5rem;
+    width: 36.06rem;
+    position: absolute;
+}
+
+#main-canvas {
+    width: 30rem;
+    height: 22rem;
+    position: absolute;
+    top: 23.5vh;
+    left: 19%;
+}
+
+.frame-and-image {
+    width: 78%;
+    margin: 6vh;
+}
+
+.upload-file {
+    width: 22%;
+    align-items: center;
+    margin: auto 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#preview-image {
+    max-width: 14.4rem;
+    margin-top: 0.8rem;
+}
+
+#label {
+    width: 8rem;
+    height: 2.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    background: #ef9422;
+    border-radius: 15px;
+    color: white;
+    font-weight: 600;
+}
+
+label:hover {
+    cursor: pointer;
+    outline: 1.7px solid #ef9422;
+    outline-offset: 2.6px;
+    transition: .1s;
+}
+
+label:active {
+    background-color: #94570d;
+}
+
+#download-link{
+    width: 8rem;
+    height: 2.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    padding: 7px;
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 600;
+    background-color: #0e65cd;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+#download-link:hover {
+    cursor: pointer;
+    outline: 1.7px solid #0e65cd;;
+    outline-offset: 2.6px;
+    transition: .1s;
+}
+
+/* ADDING RESOPONSIVENESS */
+
+@media screen and (max-width : 975px) {
+    html {
+        font-size: 72%;
+    }
+
+    .tablet-container {
+        display: flex;
+        /* flex-direction: column; */
+        /* align-items: center; */
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width :667px) {
+    .tablet-img {
+        height: 15rem;
+        width: 20rem;
+    }
+
+    #main-canvas {
+        width: 16rem;
+        height: 12rem;
+        position: absolute;
+        top: 21vh;
+        left: 36%;
+    }
+
+    .upload-file {
+        width: 100%;
+        margin: 20px auto;
+    }
+}
+
+@media screen and (max-width :410px) {
+    .tablet-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .upload-file{
+        margin-top: 100px;
+    }
+    #main-canvas{
+        width: 16rem;
+        height: 12rem;
+        position: absolute;
+        top: 22vh;
+        left: 32%;
+    }
+    
+}
