@@ -22,8 +22,10 @@
         <div class="lists">
             <ul>
                 <li>Home</li>
-                <li><button id="color-btn">color</button></li>
-                <li>Contact Us</li>
+                <li><a href="mailto:mkaifcse18@gmail.com" style="text-decoration: none;
+                    color: white;">Contact</a></li>
+                <li>Products</li>
+                
             </ul>
         </div>
     </header>
@@ -64,20 +66,20 @@
             <!-- Tablet / frame  -->
             <div class="tablet-container">
                 <div class="frame-and-image">
-                    <img src="Resources/frame.png" alt="frame" class="tablet-img" id="image">
+                    <img src="frame.png" alt="frame" class="tablet-img" id="image">
                     <canvas id="main-canvas">
                     </canvas>
                 </div>
 
                 <div class="upload-file">
                     <label for="file-input" id="label">
-                        Upload <img src="Resources/upload_file_FILL0_wght400_GRAD0_opsz24.png" alt="upload-img">
+                        Upload <img src="upload_file_FILL0_wght400_GRAD0_opsz24.png" alt="upload-img">
                     </label>
                     <input type="file" id="file-input" style="display: none;">
 
                     <!-- DOWNLOAD BUTTON -->
                     <a id="download-link" class="download-button" download="processed-image.png" href="#">Download<img
-                            src="Resources/download_for_offline_FILL0_wght400_GRAD0_opsz24.png" alt=""></a>
+                            src="download_for_offline_FILL0_wght400_GRAD0_opsz24.png" alt=""></a>
 
                     <!-- UPLOADED IMAGE -->
                     <img src="" alt="Uploaded-Image" id="preview-image">
@@ -91,13 +93,6 @@
     <script async src="opencv.js" onload="openCvReady()"></script>
     <script src="script.js"></script>
 
-    <script>
-        btn = document.getElementById('btn-color');
-        btn.addEventListener("click", (e) => {
-            let header = document.getElementsByTagName('header');
-            header.style.background = "white";
-        });
-    </script>
 </body>
 
 </html>
